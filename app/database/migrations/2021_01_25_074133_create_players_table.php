@@ -16,7 +16,7 @@ class CreatePlayersTable extends Migration
         Schema::create('players', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id');
-            $table->string('player_image');
+            $table->integer('player_image');
             $table->integer('level')->default(1);
             $table->integer('hp')->default(30);
             $table->integer('attack')->default(1);

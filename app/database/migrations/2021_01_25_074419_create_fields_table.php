@@ -17,6 +17,7 @@ class CreateFieldsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('image');
+            $table->string('field_explain');
             $table->timestamps();
         });
     }

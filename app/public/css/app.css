@@ -17190,6 +17190,14 @@ section {
   display: block;
 }
 
+html {
+  height: 95%;
+}
+
+body {
+  height: 95%;
+}
+
 .site_header {
   display: flex;
   align-items: center;
@@ -17285,5 +17293,237 @@ section {
 .site_header .navbar_right .nav-item .register_link:hover {
   text-decoration: none;
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+footer {
+  background-color: brown;
+  height: 50px;
+  text-align: center;
+}
+
+footer p {
+  color: white;
+  line-height: 50px;
+}
+
+#app {
+  padding-top: 50px;
+  background-image: url("/images/background_images/平原w600.jpg");
+  background-size: cover;
+  padding: 0;
+  height: 95%;
+}
+
+main {
+  height: 100%;
+}
+
+.column {
+  flex-direction: column;
+}
+
+.main_head {
+  padding: 30px 10px 10px;
+  width: 600px;
+  margin: 0 auto;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  font-size: large;
+}
+
+.form {
+  width: 600px;
+  margin: 30px auto;
+}
+
+.form .form_group {
+  display: flex;
+  width: 50%;
+  margin: 20px auto 0;
+}
+
+.form .form_group .form_label {
+  margin-right: 15px;
+}
+
+.form .form_group .form_label i {
+  line-height: 32px;
+  font-size: larger;
+}
+
+.form .form_group input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  width: 250px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.form .form_group .input_email:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+
+.form .form_group .input_password:focus {
+  background-color: rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+
+.form .form_group .form_check {
+  display: flex;
+  align-items: center;
+}
+
+.form .form_group .form_check .input_check {
+  margin-left: 50px;
+  width: auto;
+}
+
+.form .form_group .form_check .check_label {
+  font-size: small;
+  margin-left: 10px;
+}
+
+.form .form_group .form_btn {
+  text-align: center;
+}
+
+.form .form_group .form_btn .submit_btn {
+  margin: -10px auto 0;
+  border: none;
+  position: relative;
+  display: block;
+  width: 120px;
+  padding: 3px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0);
+  background-color: #098644;
+  transition: 0.4s;
+  border-radius: 4px;
+}
+
+.form .form_group .form_btn .submit_btn:hover {
+  text-shadow: -6px 0px 15px rgba(255, 255, 240, 0.83), 6px 0px 15px rgba(255, 255, 240, 0.83);
+  transition: 0.4s;
+}
+
+.link_register {
+  width: 600px;
+  margin: 80px auto 0;
+  text-align: center;
+}
+
+.link_register p {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 200px;
+  margin: 0 auto 10px;
+  border-radius: 15px;
+}
+
+.link_register p .fas {
+  margin-right: 5px;
+}
+
+.link_register .register_btn {
+  position: relative;
+  display: inline-block;
+  padding: 10px 50px;
+  background: brown;
+  border: 3px solid brown;
+  border-radius: 4px;
+  color: brown;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1.2em;
+  transition: 0.8s;
+}
+
+.link_register .register_btn span {
+  letter-spacing: 0.25px;
+  position: relative;
+  z-index: 1;
+}
+
+.link_register .register_btn::before,
+.link_register .register_btn::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 51%;
+  height: 100%;
+  transition: 0.2s;
+  background-color: white;
+}
+
+.link_register .register_btn::before {
+  left: 0;
+}
+
+.link_register .register_btn::after {
+  right: 0;
+}
+
+.link_register .register_btn:hover::before,
+.link_register .register_btn:hover::after {
+  width: 0;
+  background-color: white;
+}
+
+.link_register .register_btn:hover {
+  color: white;
+}
+
+.confirm_span {
+  display: flex;
+  margin-left: -14px;
+}
+
+.confirm_span .w_key {
+  margin-right: -5px;
+}
+
+.input_name:focus {
+  background-color: rgba(255, 255, 255, 0.5) !important;
+  outline: none;
+}
+
+.start_btn {
+  position: relative;
+  display: block;
+  width: 160px;
+  padding: 5px;
+  margin: 20px auto 0;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background: #3ea93d;
+  border: 1px solid #037f43;
+  overflow: hidden;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.start_btn::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -150px;
+  height: 100%;
+  width: 160px;
+  background: rgba(255, 255, 255, 0.3);
+  transition: 0.4s;
+}
+
+.start_btn:hover::before {
+  left: 0;
+}
+
+.password_reset_btn {
+  width: 300px !important;
+  margin-top: 15px !important;
 }
 

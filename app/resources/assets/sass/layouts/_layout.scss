@@ -10,6 +10,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
+html {
+    height: 95%;
+}
+
+body {
+    height: 95%;
+}
+
 .site_header {
     display: flex;
     align-items: center;
@@ -108,4 +116,27 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
             }
         }
     }    
+}
+
+footer {
+    background-color: brown;
+    height: 50px;
+    text-align: center;
+
+    p {
+        color: white;
+        line-height: 50px;
+    }
+}
+
+#app {
+    padding-top: 50px;
+    background-image: url("/images/background_images/平原w600.jpg");
+    background-size: cover;
+    padding: 0;
+    height: 95%;
+}
+
+main {
+    height: 100%;
 }

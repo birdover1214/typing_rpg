@@ -16,8 +16,8 @@ class CreateQuestionsTable extends Migration
         Schema::create('questions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('field_id');
-            $table->string('japanese');
             $table->string('word');
+            $table->string('word_kana');
             $table->timestamps();
 
             //外部キー制約

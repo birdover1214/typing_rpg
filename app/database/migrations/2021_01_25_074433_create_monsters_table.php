@@ -21,6 +21,7 @@ class CreateMonstersTable extends Migration
             $table->string('image');
             $table->integer('hp');
             $table->integer('attack');
+            $table->integer('min_attack');
             $table->integer('attack_interval');
             $table->integer('exp');
             $table->timestamps();

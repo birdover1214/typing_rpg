@@ -14,4 +14,9 @@
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
 
 //layouts
-@import "layouts/header";
+@import "layouts/layout";
+
+//auth
+@import "auth/login";
+@import "auth/register";
+@import "auth/password_reset";
