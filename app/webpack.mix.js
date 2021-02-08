@@ -24,6 +24,7 @@ mix
     .js(
         [
             'resources/assets/js/app.js',
+            'resources/assets/js/system.js',
         ],
         'public/js/app.js'
     )

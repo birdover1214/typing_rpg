@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Models\Player;
+use App\Models\Field;
 
 class HomeController extends Controller
 {
@@ -23,6 +26,15 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        //ログインチェック
+        if(Auth::check()) {
+            $user = Auth::user();
+            $player = $user->player()->first();
+            $fields = Field::all();
+
+            return view('main', compact('player', 'fields'));
+        }
+
+        return view('auth.login');
     }
 }

@@ -12,6 +12,48 @@
     outline: none;
 }
 
+.form_radio {
+    flex-direction: column;
+
+    .invalid-feedback {
+        display: block;
+    }
+
+    .radio_label {
+        font-size: small;
+        border-bottom: 1px solid;
+        font-weight: bold;
+    }
+
+    .select_player {
+        display: flex;
+        margin-top: 30px;
+        justify-content: space-between;
+
+        .player_images {
+            width: 120px;
+            text-align: center;
+            border-radius: 3px;
+            box-shadow: 2px 2px 4px rgb(0 0 0 / 50%);
+            
+            .player_image {
+                height: 120px;
+            }
+        }
+
+        .radio {
+            display: none;
+        }
+
+        .radio:checked + .player_images {
+            background-color: rgba(213, 194, 30, 0.15);
+        }
+    }
+}
+
+.padding_btm {
+    padding-bottom: 45px;
+}
 
 .start_btn {
 	position: relative;
@@ -42,5 +84,8 @@
     &:hover::before {
         left:0;
     }
+}
 
+.invalid-feedback strong {
+    font-size: smaller;
 }

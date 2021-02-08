@@ -2,8 +2,16 @@
     flex-direction: column;
 }
 
+.container {
+    height: 86vh;
+
+    &.height_auto {
+        height: auto !important;
+    }
+}
+
 .main_head {
-    padding: 30px 10px 10px;
+    padding: 20px 10px 10px;
     width: 600px;
     margin: 0 auto;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -13,11 +21,12 @@
 
 .form {
     width: 600px;
-    margin: 30px auto;
+    margin: 30px auto 0;
+    padding-bottom: 30px;
 
     .form_group {
         display: flex;
-        width: 50%;
+        width: 55%;
         margin: 20px auto 0;
 
         .form_label {
@@ -91,7 +100,7 @@
 
 .link_register {
     width: 600px;
-    margin: 80px auto 0;
+    margin: 50px auto 0;
     text-align: center;
 
     p {

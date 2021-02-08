@@ -1,7 +1,9 @@
 @extends('layouts.layout')
 
+@section('title', 'TypingRPG 新規登録')
+
 @section('content')
-<div class="container">
+<div class="container height_auto">
     <div class="main_head">Register</div>
         <form method="POST" id="register_form" class="form" action="{{ route('register') }}">
             @csrf
@@ -13,7 +15,7 @@
 
                     @error('name')
                         <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
+                            <strong>※ {{ $message }}</strong>
                         </span>
                     @enderror
                 </div>
@@ -27,7 +29,7 @@
 
                     @error('email')
                         <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
+                            <strong>※ {{ $message }}</strong>
                         </span>
                     @enderror
                 </div>
@@ -41,7 +43,7 @@
 
                     @error('password')
                         <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
+                            <strong>※ {{ $message }}</strong>
                         </span>
                     @enderror
                 </div>
@@ -55,8 +57,26 @@
                 </div>
             </div>
 
+            <div class="form_group form_radio">
+                <label for="" class="radio_label">主人公を選択してください</label>
+                @error('player_image')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>※ {{ $message }}</strong>
+                    </span>
+                @enderror
+                <div class="select_player">
+                    <input id="radio_man" type="radio" name="player_image" class="radio" value="1">
+                    <label for="radio_man" class="player_images image_man">
+                        <img src="{{ asset('/images/player_images/主人公男h150.png') }}" alt="" class="player_image">
+                    </label>
+                    <input id="radio_woman" type="radio" name="player_image" class="radio" value="2">
+                    <label for="radio_woman" class="player_images image_woman">
+                        <img src="{{ asset('/images/player_images/主人公女h150.png') }}" alt="" class="player_image">
+                    </label>
+                </div>
+            </div>
             <div class="form_group column">
-                <div class="form_btn">
+                <div class="form_btn padding_btm">
                     <button type="submit" class="start_btn">
                         START!
                     </button>

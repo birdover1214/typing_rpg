@@ -1,5 +1,7 @@
 @extends('layouts.layout')
 
+@section('title', 'TypingRPG ログイン')
+
 @section('content')
 <div class="container">
     <div class="main_head">{{ __('Login') }}</div>

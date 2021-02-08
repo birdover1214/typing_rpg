@@ -17191,11 +17191,7 @@ section {
 }
 
 html {
-  height: 95%;
-}
-
-body {
-  height: 95%;
+  height: 100vh;
 }
 
 .site_header {
@@ -17203,9 +17199,11 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 0 20px;
-  position: relative;
+  position: fixed;
+  width: 100%;
   background-color: brown;
   height: 50px;
+  z-index: 100;
 }
 
 .site_header .header_brand {
@@ -17296,9 +17294,13 @@ body {
 }
 
 footer {
+  position: fixed;
+  width: 100%;
   background-color: brown;
   height: 50px;
+  bottom: 0;
   text-align: center;
+  z-index: 100;
 }
 
 footer p {
@@ -17307,23 +17309,27 @@ footer p {
 }
 
 #app {
-  padding-top: 50px;
+  padding: 50px 0;
   background-image: url("/images/background_images/平原w600.jpg");
   background-size: cover;
-  padding: 0;
-  height: 95%;
-}
-
-main {
-  height: 100%;
+  height: auto;
+  min-height: 630px;
 }
 
 .column {
   flex-direction: column;
 }
 
+.container {
+  height: 86vh;
+}
+
+.container.height_auto {
+  height: auto !important;
+}
+
 .main_head {
-  padding: 30px 10px 10px;
+  padding: 20px 10px 10px;
   width: 600px;
   margin: 0 auto;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -17333,12 +17339,13 @@ main {
 
 .form {
   width: 600px;
-  margin: 30px auto;
+  margin: 30px auto 0;
+  padding-bottom: 30px;
 }
 
 .form .form_group {
   display: flex;
-  width: 50%;
+  width: 55%;
   margin: 20px auto 0;
 }
 
@@ -17411,7 +17418,7 @@ main {
 
 .link_register {
   width: 600px;
-  margin: 80px auto 0;
+  margin: 50px auto 0;
   text-align: center;
 }
 
@@ -17491,6 +17498,49 @@ main {
   outline: none;
 }
 
+.form_radio {
+  flex-direction: column;
+}
+
+.form_radio .invalid-feedback {
+  display: block;
+}
+
+.form_radio .radio_label {
+  font-size: small;
+  border-bottom: 1px solid;
+  font-weight: bold;
+}
+
+.form_radio .select_player {
+  display: flex;
+  margin-top: 30px;
+  justify-content: space-between;
+}
+
+.form_radio .select_player .player_images {
+  width: 120px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.form_radio .select_player .player_images .player_image {
+  height: 120px;
+}
+
+.form_radio .select_player .radio {
+  display: none;
+}
+
+.form_radio .select_player .radio:checked + .player_images {
+  background-color: rgba(213, 194, 30, 0.15);
+}
+
+.padding_btm {
+  padding-bottom: 45px;
+}
+
 .start_btn {
   position: relative;
   display: block;
@@ -17522,8 +17572,384 @@ main {
   left: 0;
 }
 
+.invalid-feedback strong {
+  font-size: smaller;
+}
+
 .password_reset_btn {
   width: 300px !important;
   margin-top: 15px !important;
+}
+
+.game_container {
+  height: 82vh !important;
+}
+
+.game_display {
+  width: 600px;
+  height: 500px;
+  margin: 30px auto;
+  border: 3px solid gray;
+}
+
+.game_display .top_display {
+  width: 100%;
+  height: 250px;
+  border-bottom: 3px solid gray;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.game_display .top_display .select_field_display {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 594px;
+  height: 247px;
+  z-index: 1;
+  background-image: url("/images/background_images/地図w300.jpg");
+  background-size: 100% 100%;
+}
+
+.game_display .top_display .select_field_display .select_field {
+  width: 100%;
+  height: 100%;
+}
+
+.game_display .top_display .select_field_display .select_field .field_btn {
+  width: 120px;
+  height: 65px;
+  text-align: center;
+  border-radius: 3px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  background-size: 100% 100%;
+}
+
+.game_display .top_display .select_field_display .select_field .field_list {
+  font-size: xx-small;
+  font-weight: bold;
+  text-align: center;
+}
+
+.game_display .top_display .select_field_display .select_field .btn_wrap {
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 10px 0 15px;
+}
+
+.game_display .top_display .select_field_display .select_field .btn_wrap #field1 {
+  background-image: url("/images/field_images/平原w300.jpg");
+}
+
+.game_display .top_display .select_field_display .select_field .btn_wrap #field2 {
+  background-image: url("/images/field_images/森w300.jpg");
+}
+
+.game_display .top_display .select_field_display .select_field .btn_wrap #field3 {
+  background-image: url("/images/field_images/荒野w300.jpg");
+}
+
+.game_display .top_display .select_field_display .select_field .btn_wrap2 {
+  height: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 15px 0 10px;
+}
+
+.game_display .top_display .select_field_display .select_field .btn_wrap2 #field4 {
+  background-image: url("/images/field_images/山w300.jpg");
+}
+
+.game_display .top_display .select_field_display .select_field .btn_wrap2 #field5 {
+  background-image: url("/images/field_images/魔界w300.jpg");
+}
+
+.game_display .top_display .rpg_display {
+  background-size: 100% 100%;
+  height: 247px;
+}
+
+.game_display .top_display .rpg_display .status_display {
+  display: flex;
+  justify-content: space-around;
+  height: 50px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: 2px solid;
+}
+
+.game_display .top_display .rpg_display .status_display .player_status {
+  display: flex;
+  flex-direction: column;
+  font-size: x-small;
+  width: 12%;
+  padding-left: 5px;
+}
+
+.game_display .top_display .rpg_display .status_display .player_status p {
+  margin: 0;
+  height: 33%;
+}
+
+.game_display .top_display .rpg_display .status_display .status_player {
+  display: flex;
+  flex-direction: column;
+  width: 33%;
+  text-align: center;
+}
+
+.game_display .top_display .rpg_display .status_display .status_player .player_name {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  height: 50%;
+}
+
+.game_display .top_display .rpg_display .status_display .status_player .lvhp_container {
+  height: 50%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.game_display .top_display .rpg_display .status_display .status_player .lvhp_container .level {
+  text-align: right;
+  width: 35%;
+  margin-right: 10px;
+}
+
+.game_display .top_display .rpg_display .status_display .status_player .lvhp_container .hp {
+  text-align: left;
+  width: auto;
+}
+
+.game_display .top_display .rpg_display .status_display .status_monster {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  text-align: center;
+}
+
+.game_display .top_display .rpg_display .status_display .status_monster .monster_name,
+.game_display .top_display .rpg_display .status_display .status_monster .hp {
+  height: 50%;
+}
+
+.game_display .top_display .image_display {
+  display: flex;
+  justify-content: space-around;
+  height: 200px;
+}
+
+.game_display .top_display .image_display .item_equipment {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 70px;
+  font-size: x-small;
+  background-color: rgba(255, 255, 255, 0.75);
+  border: solid 2px #9e9e9e;
+}
+
+.game_display .top_display .image_display .item_equipment p {
+  margin: 0;
+  text-align: center;
+  background-color: #2e2c2c;
+  color: white;
+}
+
+.game_display .top_display .image_display .item_equipment img {
+  width: auto;
+  height: auto;
+  max-width: 50px;
+  max-height: 55px;
+  margin: auto;
+}
+
+.game_display .top_display .image_display .player {
+  text-align: center;
+  width: 35%;
+  height: 100%;
+}
+
+.game_display .top_display .image_display .player img {
+  width: auto;
+  height: auto;
+  max-height: 150px;
+  margin: 25px auto;
+}
+
+.game_display .top_display .image_display .monster {
+  text-align: center;
+  width: 60%;
+  height: 100%;
+  position: relative;
+}
+
+.game_display .top_display .image_display .monster img {
+  width: auto;
+  height: auto;
+  max-width: 330px;
+  max-height: 200px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+
+.game_display .text_display {
+  width: 100%;
+  height: 75px;
+  border-bottom: 2px solid gray;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.game_display .text_display #battle_text {
+  color: white;
+  overflow-y: scroll;
+}
+
+.game_display .typing_display {
+  text-align: center;
+  height: 170px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.game_display .typing_display .bold {
+  font-weight: bold;
+}
+
+.game_display .typing_display #count {
+  display: none;
+  height: 40px;
+  line-height: 40px;
+}
+
+.game_display .typing_display #count .time {
+  font-size: xx-large;
+}
+
+.game_display .typing_display #ready_count {
+  display: none;
+  padding-top: 50px;
+  font-size: xx-large;
+}
+
+.game_display .typing_display #word {
+  display: none;
+  font-size: 1.4rem;
+  height: 40px;
+  line-height: 40px;
+}
+
+.game_display .typing_display #word_kana {
+  display: none;
+  height: 30px;
+  line-height: 30px;
+}
+
+.game_display .typing_display #word_romaji {
+  display: none;
+  font-size: large;
+  height: 50px;
+  line-height: 50px;
+  letter-spacing: 0.5px;
+}
+
+.game_display .typing_display #scoredis {
+  display: none;
+  padding: 30px 200px 0;
+}
+
+.game_display .typing_display #scoredis hr {
+  margin: 5px 0;
+  border-top: 2px solid rgba(0, 0, 0, 0.3);
+}
+
+.game_display .typing_display #press_enter {
+  margin-top: 20px;
+  display: none;
+  -webkit-animation: blink 1s infinite alternate;
+          animation: blink 1s infinite alternate;
+}
+
+@-webkit-keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  49.9% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+
+  49.9% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.game_display .typing_display #battle_btn {
+  display: none;
+  position: relative;
+  z-index: 1;
+  margin-top: 50px;
+  padding: 10px 20px;
+  line-height: 1.4;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s, border-color 0.3s;
+  color: #e91e63;
+  border: 1px solid #e91e63;
+  border-radius: 3px;
+  background-color: white;
+}
+
+.game_display .typing_display #battle_btn:hover {
+  transition: all 0.5s;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  color: white;
+  background-color: #ca215a;
+  border: 1px solid #e91e63;
+}
+
+.game_display .typing_display #battle_btn:active {
+  opacity: 0.5;
+  color: #F06292;
+}
+
+.game_display .typing_display #battle_btn:focus {
+  border: 1px solid #F06292;
+  color: #F06292;
+}
+
+.game_display .typing_display #battle_btn:focus:hover {
+  color: #ffffff;
+  border: 1px solid #F06292;
 }
 

@@ -11,11 +11,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 html {
-    height: 95%;
-}
-
-body {
-    height: 95%;
+    height: 100vh;
 }
 
 .site_header {
@@ -23,9 +19,11 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    position: relative;
+    position: fixed;
+    width: 100%;
     background-color: brown;
     height: 50px;
+    z-index: 100;
 
     .header_brand {
         font-weight: bold;
@@ -119,9 +117,13 @@ body {
 }
 
 footer {
+    position: fixed;
+    width: 100%;
     background-color: brown;
     height: 50px;
+    bottom: 0;
     text-align: center;
+    z-index: 100;
 
     p {
         color: white;
@@ -130,13 +132,9 @@ footer {
 }
 
 #app {
-    padding-top: 50px;
+    padding: 50px 0;
     background-image: url("/images/background_images/平原w600.jpg");
     background-size: cover;
-    padding: 0;
-    height: 95%;
-}
-
-main {
-    height: 100%;
+    height: auto;
+    min-height: 630px;
 }
