@@ -901,6 +901,7 @@ $(function() {
             $('#battle_text').append("<br>装備するアイテムを選択してください。");
         })
         .fail(function(response) {
+            console.log(response)
             $('#battle_text').append("<br>データの取得に失敗しました。");
             textScroll();
         });

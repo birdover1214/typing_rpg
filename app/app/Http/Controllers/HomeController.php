@@ -29,6 +29,7 @@ class HomeController extends Controller
         //ログインチェック
         if(Auth::check()) {
             $user = Auth::user();
+<<<<<<< HEAD
             $player = $user->player;
             $fields = Field::all();
 
@@ -42,6 +43,12 @@ class HomeController extends Controller
                 $player->field5_victory_count);
 
             return view('main.main', compact('player', 'fields', 'victories'));
+=======
+            $player = $user->player()->first();
+            $fields = Field::all();
+
+            return view('main', compact('player', 'fields'));
+>>>>>>> origin/master
         }
 
         return view('auth.login');

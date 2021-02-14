@@ -17190,6 +17190,13 @@ section {
   display: block;
 }
 
+<<<<<<< HEAD
+=======
+html {
+  height: 100vh;
+}
+
+>>>>>>> origin/master
 .site_header {
   display: flex;
   align-items: center;
@@ -17321,10 +17328,16 @@ section {
 }
 
 footer {
+<<<<<<< HEAD
+=======
+  position: fixed;
+>>>>>>> origin/master
   width: 100%;
   background-color: brown;
   height: 50px;
+  bottom: 0;
   text-align: center;
+  z-index: 100;
 }
 
 footer p {
@@ -17333,14 +17346,26 @@ footer p {
 }
 
 #app {
-  padding-top: 50px;
+  padding: 50px 0;
   background-image: url("/images/background_images/平原w600.jpg");
   background-size: cover;
+<<<<<<< HEAD
+=======
+  height: auto;
+>>>>>>> origin/master
   min-height: 630px;
 }
 
 .column {
   flex-direction: column;
+}
+
+.container {
+  height: 86vh;
+}
+
+.container.height_auto {
+  height: auto !important;
 }
 
 .main_head {
@@ -17479,7 +17504,11 @@ footer p {
 
 .link_register {
   width: 600px;
+<<<<<<< HEAD
   margin: 100px auto;
+=======
+  margin: 50px auto 0;
+>>>>>>> origin/master
   text-align: center;
 }
 
@@ -17642,6 +17671,7 @@ footer p {
   margin-top: 15px !important;
 }
 
+<<<<<<< HEAD
 .status_message {
   text-align: center;
   width: 580px;
@@ -17754,6 +17784,10 @@ footer p {
 
 .equipment_display .having_items_list li .item_detail p i {
   line-height: 20px;
+=======
+.game_container {
+  height: 82vh !important;
+>>>>>>> origin/master
 }
 
 .game_display {
@@ -17790,15 +17824,22 @@ footer p {
 }
 
 .game_display .top_display .select_field_display .select_field .field_btn {
+<<<<<<< HEAD
   position: relative;
   width: 120px;
   height: 65px;
   border: none;
+=======
+  width: 120px;
+  height: 65px;
+  text-align: center;
+>>>>>>> origin/master
   border-radius: 3px;
   box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   background-size: 100% 100%;
 }
 
+<<<<<<< HEAD
 .game_display .top_display .select_field_display .select_field .not_select:before {
   content: "\FF1F";
   position: absolute;
@@ -17814,6 +17855,8 @@ footer p {
   line-height: 65px;
 }
 
+=======
+>>>>>>> origin/master
 .game_display .top_display .select_field_display .select_field .field_list {
   font-size: xx-small;
   font-weight: bold;
@@ -17949,8 +17992,13 @@ footer p {
 .game_display .top_display .image_display .item_equipment img {
   width: auto;
   height: auto;
+<<<<<<< HEAD
   max-width: 42px;
   max-height: 50px;
+=======
+  max-width: 50px;
+  max-height: 55px;
+>>>>>>> origin/master
   margin: auto;
 }
 
@@ -18059,7 +18107,11 @@ footer p {
 }
 
 .game_display .typing_display #press_enter {
+<<<<<<< HEAD
   padding-top: 20px;
+=======
+  margin-top: 20px;
+>>>>>>> origin/master
   display: none;
   -webkit-animation: blink 1s infinite alternate;
           animation: blink 1s infinite alternate;
@@ -18101,6 +18153,7 @@ footer p {
   }
 }
 
+<<<<<<< HEAD
 .game_display .typing_display .select_next_action {
   display: none;
   padding-top: 50px;
@@ -18120,6 +18173,8 @@ footer p {
   box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
 }
 
+=======
+>>>>>>> origin/master
 .game_display .typing_display #battle_btn {
   display: none;
   position: relative;
@@ -18159,6 +18214,7 @@ footer p {
   border: 1px solid #F06292;
 }
 
+<<<<<<< HEAD
 ::-webkit-scrollbar {
   width: 6px;
 }
@@ -18664,3 +18720,5 @@ footer p {
   }
 }
 
+=======
+>>>>>>> origin/master

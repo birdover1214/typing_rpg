@@ -10,6 +10,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
+<<<<<<< HEAD
+=======
+html {
+    height: 100vh;
+}
+
+>>>>>>> origin/master
 .site_header {
     display: flex;
     align-items: center;
@@ -144,10 +151,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 footer {
+<<<<<<< HEAD
+=======
+    position: fixed;
+>>>>>>> origin/master
     width: 100%;
     background-color: brown;
     height: 50px;
+    bottom: 0;
     text-align: center;
+    z-index: 100;
 
     p {
         color: white;
@@ -156,8 +169,12 @@ footer {
 }
 
 #app {
-    padding-top: 50px;
+    padding: 50px 0;
     background-image: url("/images/background_images/平原w600.jpg");
     background-size: cover;
+<<<<<<< HEAD
+=======
+    height: auto;
+>>>>>>> origin/master
     min-height: 630px;
 }

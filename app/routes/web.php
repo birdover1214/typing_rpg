@@ -25,6 +25,7 @@ Route::group(['middleware' => 'auth'], function() {
 
     Route::post('/setdata', 'GameController@setData');
 
+<<<<<<< HEAD
     Route::post('/getitem', 'GameController@getItem');
 
     Route::post('/setitem', 'GameController@setItem');
@@ -34,4 +35,6 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('/userinfo', 'UserController@editInfo')->name('userEdit');
 
     Route::post('/delete', 'UserController@delete')->name('userDelete');
+=======
+>>>>>>> origin/master
 });

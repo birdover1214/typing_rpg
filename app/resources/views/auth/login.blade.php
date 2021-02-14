@@ -1,6 +1,52 @@
 @extends('layouts.layout')
 
 @section('title', 'TypingRPG ログイン')
+<<<<<<< HEAD
+=======
+
+@section('content')
+<div class="container">
+    <div class="main_head">{{ __('Login') }}</div>
+        <form method="POST" id="login_form" class="form" action="{{ route('login') }}">
+            @csrf
+            <div class="form_group">
+                <label for="email" class="form_label"><i class="far fa-envelope"></i></label>
+
+                <div class="form_input">
+                    <input id="email" type="email" class="input_email @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="メールアドレス">
+
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form_group">
+                <label for="password" class="form_label"><i class="fas fa-key"></i></label>
+
+                <div class="form_input">
+                    <input id="password" type="password" class="input_password @error('password') is-invalid @enderror" name="password" required autocomplete="current-password" placeholder="パスワード">
+
+                    @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+                </div>
+            </div>
+
+            <div class="form_group">
+                <div class="form_check">
+                    <input class="input_check" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                    <label class="check_label" for="remember">
+                        ログイン状態を維持する
+                    </label>
+                </div>
+            </div>
+>>>>>>> origin/master
 
 @section('content')
 <div id="app">

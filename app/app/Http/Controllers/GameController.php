@@ -12,22 +12,32 @@ use App\Models\Item;
 
 class GameController extends Controller
 {
+<<<<<<< HEAD
     public function getData(Request $request)
     {
+=======
+    public function getData(Request $request) {
+>>>>>>> origin/master
 
         $user = Auth::user();
         $field_id = $request->field_id;
         $dropItems = [];
 
         $field = Field::find($field_id);
+<<<<<<< HEAD
         $player = $user->player;
         $equip_item = Item::find($player->equipment);
+=======
+        $player = $user->player()->first();
+        $item = Item::where('id', $player->equipment);
+>>>>>>> origin/master
         $monsters = Monster::where('field_id', $field_id)->get();
         foreach($monsters as $monster) {
             array_push($dropItems, Item::where('id', $monster->item_id)->first());
         }
         $questions = Question::where('field_id', $field_id)->get();
 
+<<<<<<< HEAD
         $having_items = [];
 
         foreach($player->items as $item) {
@@ -101,5 +111,14 @@ class GameController extends Controller
         $item = Item::find($request->id);
 
         return response(compact('item'));
+=======
+        return response(compact('user', 'field', 'player', 'item', 'monsters', 'dropItems', 'questions'));
+    }
+
+    public function setData(Request $request) {
+        $res = $request->all();
+
+        return response(compact('res'));
+>>>>>>> origin/master
     }
 }
