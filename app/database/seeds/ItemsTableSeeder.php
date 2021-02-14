@@ -122,7 +122,7 @@ class ItemsTableSeeder extends Seeder
                 'name' => 'バスタードソード',
                 'image' => 'バスタードソードw50.png',
                 'attack' => 18,
-                'defence' => 7,
+                'defence' => 8,
                 'mistake_damage' => 7,
             ],
             //フェンリル
@@ -153,8 +153,8 @@ class ItemsTableSeeder extends Seeder
             [
                 'name' => '蒼雷剣',
                 'image' => '蒼雷剣w50.png',
-                'attack' => 29,
-                'defence' => 5,
+                'attack' => 30,
+                'defence' => 8,
                 'mistake_damage' => 9,
             ],
             //フレイムドラゴン

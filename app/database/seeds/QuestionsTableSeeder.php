@@ -1480,7 +1480,7 @@ class QuestionsTableSeeder extends Seeder
             [
                 'field_id' => 5,
                 'word' => '過ちて改めざる是を過ちと謂う',
-                'word_kana' => 'あやまちてあらためざるこれをあやまちをいう',
+                'word_kana' => 'あやまちてあらためざるこれをあやまちという',
             ],
 
             [

@@ -3,7 +3,7 @@
 }
 
 .main_head {
-    padding: 30px 10px 10px;
+    padding: 20px 10px 10px;
     width: 600px;
     margin: 0 auto;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
@@ -13,11 +13,12 @@
 
 .form {
     width: 600px;
-    margin: 30px auto;
+    margin: 30px auto 0;
+    padding-bottom: 30px;
 
     .form_group {
         display: flex;
-        width: 50%;
+        width: 55%;
         margin: 20px auto 0;
 
         .form_label {
@@ -86,12 +87,58 @@
                 }
             }
         }
+
+        .btn-link {
+            position: relative;
+            display: inline-block;
+            padding: 0.1em 0.3em;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        
+        .btn-link::after,
+        .btn-link::before {
+            position: absolute;
+            content: '';
+            border-radius: 3px;
+        }
+
+        .btn-link::after {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: all .3s ease;
+        }
+
+        .btn-link::before {
+            top: -4px;
+            bottom: -5px;
+            left: -4px;
+            right: -5px;
+            width: calc(100% + 6px);
+            height: calc(100% + 6px);
+            border: 2px solid #0936c7;
+            opacity: 0;
+            transition: all .3s;
+        }
+
+        .btn-link:hover:before {
+            top: 2px;
+            left: 2px;
+            width: calc(100% - 6px);
+            height: calc(100% - 6px);
+            opacity: 1;
+        }
     }
 }
 
 .link_register {
     width: 600px;
-    margin: 80px auto 0;
+    margin: 100px auto;
     text-align: center;
 
     p {

@@ -10,22 +10,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     display: block;
 }
 
-html {
-    height: 95%;
-}
-
-body {
-    height: 95%;
-}
-
 .site_header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
-    position: relative;
+    position: fixed;
+    width: 100%;
     background-color: brown;
     height: 50px;
+    z-index: 100;
 
     .header_brand {
         font-weight: bold;
@@ -38,9 +32,9 @@ body {
         list-style: none;
         display: flex;
         justify-content: space-around;
-        width: 500px;
+        width: 600px;
 
-        button {
+        .nav_middle {
             position: relative;
             display: inline-block;
             color: white;
@@ -54,18 +48,23 @@ body {
             cursor: pointer;
             text-decoration: none;
         }
-
-        #restart_btn:hover {
-            cursor: pointer;
-            text-decoration: none;
-        }
-
+        
         #change_field_btn:hover {
             cursor: pointer;
             text-decoration: none;
         }
+        
+        #user_info:hover {
+            cursor: pointer;
+            text-decoration: none;
+        }
 
-        button::after {
+        #battle_reset:hover {
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .nav_middle::after {
             position: absolute;
             bottom: -4px;
             left: 0;
@@ -83,12 +82,17 @@ body {
             transform: scale(1, 1);
         }
 
-        #restart_btn:hover::after {
+        #change_field_btn:hover::after {
             transform-origin: left top;
             transform: scale(1, 1);
         }
 
-        #change_field_btn:hover::after {
+        #user_info:hover::after {
+            transform-origin: left top;
+            transform: scale(1, 1);
+        }
+
+        #battle_reset:hover::after {
             transform-origin: left top;
             transform: scale(1, 1);
         }
@@ -99,6 +103,27 @@ body {
         list-style: none;
         
         .nav-item {
+
+            #show_info {
+                width: 35px;;
+                margin-right: 10px;
+                font-size: 30px;
+                background: none;
+                outline: none;
+                border: none;
+                color: white;
+                padding: 0;
+                line-height: 35px;
+            }
+
+            .btn_logout {
+                color: white;
+                border: none;
+                outline: none;
+                background: none;
+                font-weight: bold;
+                line-height: 35px;
+            }
 
             a {
                 padding: 5px 20px;
@@ -119,6 +144,7 @@ body {
 }
 
 footer {
+    width: 100%;
     background-color: brown;
     height: 50px;
     text-align: center;
@@ -133,10 +159,5 @@ footer {
     padding-top: 50px;
     background-image: url("/images/background_images/平原w600.jpg");
     background-size: cover;
-    padding: 0;
-    height: 95%;
-}
-
-main {
-    height: 100%;
+    min-height: 630px;
 }

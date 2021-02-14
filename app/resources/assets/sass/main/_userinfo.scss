@@ -1,0 +1,329 @@
+.player_init {
+    position: relative;
+	margin: 40px 0 0;
+	padding: 30px 15px 5px;
+	border: 3px solid #1b2538;
+	background-color: rgba(255, 245, 227, 0.75);
+	border-radius: 8px;
+    text-align: center;
+    
+    &::before {
+        position: absolute;
+        top: -16px;
+        left: 16px;
+        content: attr(title);
+        padding: 5px 15px;
+        font-weight: bold;
+        color: white;
+        background-color: #1b2538;
+        border-radius: 4px;
+    }
+}
+
+.check_label {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+
+    #player_init {
+        position: relative;
+        display: inline-block;
+        margin: 3px 5px 0 0;
+    }
+
+    div {
+        position: relative;
+        display: inline-block;
+
+        span {
+            position: absolute;
+            display: none;
+            transition: transform .2s ease;
+        }
+    }
+}
+
+#player_init:checked + div span {
+    position: absolute;
+    top: -5px;
+    left: 100%;
+    display: inline-block;
+    clear: both;
+    margin-left: 20px;
+    padding: 8px 15px;
+    transition: transform .2 ease;
+    text-align: center;
+    white-space: nowrap;
+    color: white;
+    border-radius: 4px;
+    background-color: rgba(34, 34, 34, 0.9);
+    box-shadow: 0 0 10px rgba(34, 34, 34, 0.2);
+
+    &:before {
+        position: absolute;
+        top: 4px;
+        left: -1px;
+        content: '';
+        transform: rotate(45deg);
+        border-top: 8px solid transparent;
+        border-right: 8px solid transparent;
+        border-bottom: 8px solid rgba(34, 34, 34, 0.9);
+    }
+}
+
+.error_field {
+    font-size: small;
+    display: block;
+
+    &.modal_error {
+        position: absolute;
+        top: -25px;
+        left: 50px;
+    }
+
+    strong {
+        color: #f32727;
+    }
+}
+
+#edit_btn {
+    position: relative;
+	display: block;
+	width: 200px;
+    padding: 10px;
+    margin: 20px auto 0;
+	text-align: center;
+	text-decoration: none;
+	color: white;
+	background: #2166cd;
+	border:1px solid #0707a4;
+    overflow: hidden;
+    font-weight: bold;
+    letter-spacing: 1px;
+    border-radius: 5px;
+
+    &::before {
+        content:"";
+        position: absolute;
+        top: 0px;
+        left: -190px;
+        height: 100%;
+        width: 200px;
+        background : rgba(255, 255, 255, 0.3);
+        transition: .4s;
+    }
+
+    &:hover::before {
+        left:0;
+    }
+}
+
+.check_modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0,0, 0.7);
+    top: 0;
+    left: 0;
+
+    .modal_window {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        width: 550px;
+        height: 360px;
+        padding: 20px;
+        background-color: rgba(255, 245, 227, 0.75);
+        border: 3px solid #b09b88;
+        border-radius: 6px;
+        box-shadow: 2px 5px 10px;
+
+        &.delete_window {
+            width: 500px;
+            height: 250px;
+        }
+        
+        div {
+            text-align: center;
+        }
+
+        .check_head {
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .check_text {
+            font-size: 16px;
+
+            span {
+                display: inline-block;
+                width: 400px;
+            }
+
+            strong {
+                display: none;
+                font-size: 11px;
+                color: #f32727;
+            }
+        }
+
+        .check_current_password {
+            position: relative;
+            width: 80%;
+            margin: 30px auto 20px;
+
+            #current_password {
+                font: 15px/24px sans-serif;
+                box-sizing: border-box;
+                width: 75%;
+                padding: 5px 5px 5px 40px;
+                border: 2px solid #1b2538;
+                border-radius: 4px;
+                outline: none;
+            }
+
+            #current_password:focus {
+                border-color: #da3c41;
+
+                i {
+                    color: #da3c41;
+                }
+            }
+
+            i {
+                position: absolute;
+                top: 0;
+                left: 50px;
+                padding: 10px 5px 10px 13px;
+                color: #aaa;
+            }
+        }
+
+        .form_button_wrap {
+            margin-top: 10px;
+
+            .modal_btn {
+                position: relative;
+                display: block;
+                width: 160px;
+                padding: 5px;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 4px;
+                box-shadow: inset 0 2px 0 rgb(255 255 255 / 20%), 0 2px 2px rgb(0 0 0 / 19%);
+                margin: 10px auto;
+
+                &#decide_btn {
+                    color: #FFF;
+                    background: #e71d1d;
+                    border-bottom: 2px solid #8f0000;    
+                }
+
+                &#delete_btn {
+                    color: #FFF;
+                    background: #e71d1d;
+                    border-bottom: 2px solid #8f0000;    
+                }
+
+                &.cancel_btn {
+                    color: black;
+                    background: white;
+                }
+            }
+
+            #decide_btn:active {
+                border-bottom: 2px solid black;
+                box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+            }
+
+            #cancel_btn:active {
+                border-bottom: 2px solid black;
+                box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+}
+
+#delete_form {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 30px;
+    
+    #delete_check {
+        width: 200px;
+        padding: 10px;
+        border: 2px solid #e91e63;
+        background-color: rgba(245, 15, 15, 0.5);
+        border-radius: 5px;
+        letter-spacing: 1px;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        transition: .4s ease;
+    }
+
+    #delete_check:hover {
+        background-color: rgba(255, 255, 255, 0.75);
+        color: #e71d1d;
+    }
+}
+
+.current_password_feedback {
+    display: block !important;
+    text-align: center;
+    margin: 20px auto -20px;
+
+    p {
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    strong {
+        font-size: 15px;
+    }
+}
+
+.flash_message {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    width: 220px;
+    height: 0px;
+    line-height: 40px;
+    padding-left: 25px;
+    background-color: rgb(139 195 74 / 60%);
+    border-radius: 5px;
+    overflow: hidden;
+    animation: flashMessage 5s;
+    animation-fill-mode: both;
+
+    .fa-check {
+        margin-right: 5px;
+    }
+}
+
+@keyframes flashMessage {
+    0% {
+        transform: translateX(0);
+        height: 40px;
+    }
+    5%,95% {
+        transform: translateX(-100%);
+        height: 40px;
+    }
+    99.9% {
+        transform: translateX(0);
+        height: 40px;
+    }
+    100% {
+        height: 0;
+    }
+}

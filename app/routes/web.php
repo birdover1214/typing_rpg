@@ -13,10 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
+Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
+
+Route::group(['middleware' => 'auth'], function() {
+
+    Route::post('/getdata', 'GameController@getData');
+
+    Route::post('/setdata', 'GameController@setData');
+
+    Route::post('/getitem', 'GameController@getItem');
+
+    Route::post('/setitem', 'GameController@setItem');
+
+    Route::get('/userinfo', 'UserController@showInfo')->name('userInfo');
+
+    Route::post('/userinfo', 'UserController@editInfo')->name('userEdit');
+
+    Route::post('/delete', 'UserController@delete')->name('userDelete');
+});

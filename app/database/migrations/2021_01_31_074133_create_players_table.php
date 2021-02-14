@@ -24,6 +24,11 @@ class CreatePlayersTable extends Migration
             $table->integer('exp')->default(0);
             $table->integer('next_exp')->default(3);
             $table->integer('equipment')->nullable();
+            $table->integer('field1_victory_count')->default(0);
+            $table->integer('field2_victory_count')->default(0);
+            $table->integer('field3_victory_count')->default(0);
+            $table->integer('field4_victory_count')->default(0);
+            $table->integer('field5_victory_count')->default(0);
             $table->timestamps();
 
             //外部キー制約

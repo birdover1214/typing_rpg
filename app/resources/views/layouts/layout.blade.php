@@ -7,10 +7,12 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>@yield('title')</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    @yield('scripts')
+    @yield('sounds')
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -31,13 +33,16 @@
             @auth
                 <ul class="navbar_middle">
                     <li class="nav_middle_item">
-                        <button id="change_equipment_btn">装備の変更</button>
+                        <button id="change_equipment_btn" class="nav_middle">装備変更</button>
                     </li>
                     <li class="nav_middle_item">
-                        <button id="restart_btn">バトルのリセット</button>
+                        <button id="change_field_btn" class="nav_middle">フィールド変更</button>
                     </li>
                     <li class="nav_middle_item">
-                        <button id="change_field_btn">フィールドの変更</button>
+                        <button id="battle_reset" class="nav_middle">バトルリセット(Escキー)</button>
+                    </li>
+                    <li class="nav_middle_item">
+                        <a id="user_info" href="{{ route('userInfo') }}" class="nav_middle">ユーザー情報</a>
                     </li>
                 </ul>
             @endauth
@@ -57,6 +62,9 @@
                     @endif
                 @else
                     <li class="nav-item">
+                        <button id="show_info"><i class="far fa-question-circle"></i></button>
+                    </li>
+                    <li class="nav-item">
                         <div class="nav_logout">
                             <form id="logout-form" action="{{ route('logout') }}" method="POST">
                                 @csrf
@@ -68,11 +76,7 @@
             </ul>
         </div>
     </header>
-    <div id="app">
-        <main class="site_main">
-            @yield('content')
-        </main>
-    </div>
+    @yield('content')
     <footer class="site_footer">
         <p>CopyLight TypingRPG 2021</p>
     </footer>
