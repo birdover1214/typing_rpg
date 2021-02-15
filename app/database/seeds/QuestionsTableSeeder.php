@@ -957,7 +957,7 @@ class QuestionsTableSeeder extends Seeder
             [
                 'field_id' => 4,
                 'word' => 'Strike while the iron is hot',
-                'word_kana' => 'strile while the iron is hot',
+                'word_kana' => 'strike while the iron is hot',
             ],
 
             [
