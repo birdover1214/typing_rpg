@@ -44,10 +44,10 @@
                     選択したフィールド内で最も弱いモンスターに必ず遭遇します。<br>
                     新しいフィールドのモンスターが強すぎると感じた場合は、前のフィールドでレベル上げや装備品を獲得して<br>
                     再度挑戦してみましょう。<br><br>
-                    ※ フィールド「山岳地帯」では英語の慣用句が問題文として出題されます。<br><br>
+                    <span style="color: red">※ フィールド「山岳地帯」では英語の慣用句が問題文として出題されます。<br><br>
                     例)Every medal has two sides<br><br>
                     先頭の「E」は小文字でタイプしてください。また、単語と単語の間のスペースは<br>
-                    スペースキーをタイプしてください。
+                    スペースキーをタイプしてください。</span>
                 </p>
             </div>
             <div id="battle_info" class="info_tabpanel">
@@ -97,13 +97,17 @@
                     <span class="image_name">経験値獲得とレベルアップ画面</span><br><br>
                     バトルに勝利すると経験値を獲得でき、一定の経験値が蓄積するとプレイヤーのレベルがアップします。<br>
                     レベルアップすると最大HPが増加し、ボーナスポイントが付与されます。<br>
-                    ボーナスポイントを自由に振り分けてキャラクターを成長させましょう。
-
+                    ボーナスポイントを自由に振り分けてキャラクターを成長させましょう。<br><br>
+                    <span class="info_head">バトルのリセット</span><br><br>
+                    バトル中のみ「バトルリセット」ボタンが押せるようになります。<br>
+                    現在バトルを行っているモンスターとの戦闘開始前の状態に戻すことがでます。<br>
+                    「Esc」キーでも同様にバトルリセットが行えます。
                 </p>
             </div>
             <div id="equipment_info" class="info_tabpanel">
                 <h2>装備選択画面</h2>
                 <p>
+                    <span class="info_head">装備の変更</span><br><br>
                     <img class="info_image_w400" src="{{ asset('/images/system_images/itemw400.png') }}" alt="装備選択画面"><br>
                     <span class="image_name3">装備選択画面</span><br><br>
                     装備変更ボタンを押すと獲得済みの装備アイテムが一覧表示されます。<br>
@@ -113,7 +117,10 @@
                     各アイテム画像の右側に表示されているアイコンは<br>
                     <i class="far fa-hand-rock"></i>が攻撃力を表し、アイテムの攻撃能力になります。<br>
                     <i class="fas fa-shield-alt"></i>が防御力を表し、アイテムの防御能力になります。<br>
-                    <i class="far fa-tired"></i>がタイプミス時にプレイヤーが受けるダメージを表します。
+                    <i class="far fa-tired"></i>がタイプミス時にプレイヤーが受けるダメージを表します。<br><br>
+                    <span class="info_head">アイテムドロップに関して</span><br><br>
+                    モンスターはそれぞれ1種類のアイテムを所持しています。<br>
+                    <span style="color: red">一度アイテムをドロップしたモンスターは以降のバトルではアイテムをドロップしません。</span>
                 </p>
             </div>
         </div>
