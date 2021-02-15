@@ -24,11 +24,7 @@ mix
     .js(
         [
             'resources/assets/js/app.js',
-<<<<<<< HEAD
             'resources/assets/js/main.js',
-=======
-            'resources/assets/js/system.js',
->>>>>>> origin/master
         ],
         'public/js/app.js'
     )

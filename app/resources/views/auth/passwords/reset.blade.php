@@ -1,67 +1,60 @@
 @extends('layouts.layout')
 
+@section('title', 'TypingRPG 新規登録')
+
 @section('content')
 <div id="app">
     <main class="site_main">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8">
-                    <div class="card">
-                        <div class="card-header">{{ __('Reset Password') }}</div>
+        <div class="container height_auto">
+            <div class="main_head">Password Reset</div>
+                <form method="POST" id="reset_password_form" class="form" action="{{ route('password.update') }}">
+                    @csrf
+                    <input type="hidden" name="token" value="{{ $token }}">
 
-                        <div class="card-body">
-                            <form method="POST" action="{{ route('password.update') }}">
-                                @csrf
-
-                                <input type="hidden" name="token" value="{{ $token }}">
-
-                                <div class="form-group row">
-                                    <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
-
-                                    <div class="col-md-6">
-                                        <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ $email ?? old('email') }}" required autocomplete="email" autofocus>
-
-                                        @error('email')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                                    <div class="col-md-6">
-                                        <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">
-
-                                        @error('password')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
-                                        @enderror
-                                    </div>
-                                </div>
-
-                                <div class="form-group row">
-                                    <label for="password-confirm" class="col-md-4 col-form-label text-md-right">{{ __('Confirm Password') }}</label>
-
-                                    <div class="col-md-6">
-                                        <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                                    </div>
-                                </div>
-
-                                <div class="form-group row mb-0">
-                                    <div class="col-md-6 offset-md-4">
-                                        <button type="submit" class="btn btn-primary">
-                                            {{ __('Reset Password') }}
-                                        </button>
-                                    </div>
-                                </div>
-                            </form>
+                    <div class="form_group">
+                        <label for="email" class="form_label"><i class="far fa-envelope"></i></label>
+                        
+                        <div class="form_input">
+                            <input id="email" type="email" class="input_email @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="登録メールアドレス">
+                        
+                            @error('email')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>※ {{ $message }}</strong>
+                            </span>
+                            @enderror
                         </div>
                     </div>
-                </div>
+                
+                    <div class="form_group">
+                        <label for="password" class="form_label"><i class="fas fa-key"></i></label>
+                        
+                        <div class="form_input">
+                            <input id="password" type="password" class="input_password @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="パスワード(8文字以上)">
+                            
+                            @error('password')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>※ {{ $message }}</strong>
+                            </span>
+                            @enderror
+                        </div>
+                    </div>
+
+                    <div class="form_group">
+                        <label for="password-confirm" class="form_label"><span class="confirm_span"><i class="fas fa-key w_key"></i><i class="fas fa-key"></i></span></label>
+                        
+                        <div class="form_input">
+                            <input id="password-confirm" type="password" class="input_password" name="password_confirmation" required autocomplete="new-password" placeholder="パスワード再入力">
+                        </div>
+                    </div>
+                    
+                    <div class="form_group column">
+                        <div class="form_btn padding_btm">
+                            <button type="submit" class="start_btn">
+                                Reset Password
+                            </button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </main>

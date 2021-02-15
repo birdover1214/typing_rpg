@@ -16,6 +16,6 @@ class Player extends Model
     }
 
     public function items() {
-        return $this->hasMany('App\Models\Item');
+        return $this->belongsToMany('App\Models\Item');
     }
 }

@@ -716,7 +716,7 @@ class QuestionsTableSeeder extends Seeder
             [
                 'field_id' => 3,
                 'word' => '一朝一夕',
-                'word_kana' => 'いっしょういっせき',
+                'word_kana' => 'いっちょういっせき',
             ],
 
             [

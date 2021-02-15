@@ -49,8 +49,8 @@ class ItemsTableSeeder extends Seeder
             [
                 'name' => 'ハルバード',
                 'image' => 'ハルバードw50.png',
-                'attack' => 4,
-                'defence' => 1,
+                'attack' => 6,
+                'defence' => 2,
                 'mistake_damage' => 3,
             ],
             //ツチノコ

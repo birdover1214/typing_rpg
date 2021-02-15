@@ -26,6 +26,12 @@
     @include('main.info')
     <main class="site_main">
         <div class="container game_container">
+            @if(Session::has('status'))
+                <div class="main_message">
+                    <i class="fas fa-check faa-shake animated"></i>
+                    {{ session('status') }}
+                </div>
+            @endif
             <div class="game_display">
                 <div class="top_display">
                     <div class="select_field_display">
@@ -96,7 +102,7 @@
                 </div>
                 <div class="text_display">
                     <div id="battle_text">
-                        @if($player->level == 1)
+                        @if($victories[0] === 0)
                         TypingRPGをプレイしていただきありがとうございます。<br>
                         遊び方の説明をご覧になりたい場合は右上の <i class="far fa-question-circle"></i> マークをクリックしてください。
                         @else
