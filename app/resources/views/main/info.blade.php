@@ -9,6 +9,8 @@
         <label for="battle_tab">バトル画面</label>
         <input type="radio" name="info_tab" id="equipment_tab" aria-controls="equipment_info">
         <label for="equipment_tab">装備選択画面</label>
+        <input type="radio" name="info_tab" id="credit_tab" aria-controls="credit_info">
+        <label for="credit_tab">クレジット</label>
         <div class="info_tabpanels">
             <div id="game_info" class="info_tabpanel">
                 <h2>ゲームの進め方</h2>
@@ -121,6 +123,20 @@
                     <span class="info_head">アイテムドロップに関して</span><br><br>
                     モンスターはそれぞれ1種類のアイテムを所持しています。<br>
                     <span style="color: red">一度アイテムをドロップしたモンスターは以降のバトルではアイテムをドロップしません。</span>
+                </p>
+            </div>
+            <div id="credit_info" class="info_tabpanel">
+                <h2>クレジット</h2>
+                <p>
+                    この作品の製作には、下記サイトの素材を使用させていただきました。<br><br>
+                    <span class="info_head">BGM・効果音・ボイス素材</span><br><br>
+                    魔王魂様<br>
+                    <a href="https://maoudamashii.jokersounds.com" target="_blank" rel="noopener">フリー音楽素材/魔王魂</a><br><br>
+                    効果音ラボ様<br>
+                    <a href="https://soundeffect-lab.info" target="_blank" rel="noopener">https://soundeffect-lab.info</a><br><br>
+                    <span class="info_head">画像素材</span><br><br>
+                    七三ゆきのアトリエ様<br>
+                    <a href="https://nanamiyuki.com/" target="_blank" rel="noopener">https://nanamiyuki.com/</a>
                 </p>
             </div>
         </div>
