@@ -1,7 +1,13 @@
 {
     "/js/app.js": "/js/app.js",
     "/../resources/assets/build/css/app.css": "/../resources/assets/build/css/app.css",
+    "/js/app.js.map": "/js/app.js.map",
+    "/../resources/assets/build/css/app.css.map": "/../resources/assets/build/css/app.css.map",
     "/js/edit.js": "/js/edit.js",
+    "/js/edit.js.map": "/js/edit.js.map",
+    "/js/main.js": "/js/main.js",
+    "/js/main.js.map": "/js/main.js.map",
     "/js/popper.js": "/js/popper.js",
+    "/js/popper.js.map": "/js/popper.js.map",
     "/css/app.css": "/css/app.css"
 }

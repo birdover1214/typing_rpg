@@ -24,9 +24,15 @@ mix
     .js(
         [
             'resources/assets/js/app.js',
-            'resources/assets/js/main.js',
         ],
         'public/js/app.js'
+    )
+
+    .js(
+        [
+            'resources/assets/js/main.js',
+        ],
+        'public/js/main.js'
     )
 
     .js(

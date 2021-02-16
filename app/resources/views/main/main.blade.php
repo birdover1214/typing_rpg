@@ -2,6 +2,10 @@
 
 @section('title', 'TypingRPG')
 
+@section('scripts')
+<script src="{{ asset('js/main.js') }}" defer></script>
+@endsection
+
 @section('sounds')
 <audio src ="{{ asset('/sounds/セレクト音.mp3') }}" id="selectAudio"></audio>
 <audio src ="{{ asset('/sounds/タイプ音.mp3') }}" id="correctAudio"></audio>
