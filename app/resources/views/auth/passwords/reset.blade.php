@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-@section('title', 'TypingRPG 新規登録')
+@section('title', 'TypingRPG パスワードリセット')
 
 @section('content')
 <div id="app">

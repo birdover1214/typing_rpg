@@ -1,5 +1,7 @@
 @extends('layouts.layout')
 
+@section('title', 'TypingRPG パスワードリセット')
+
 @section('content')
 <div id="app">
     <main class="site_main">
