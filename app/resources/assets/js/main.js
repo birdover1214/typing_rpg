@@ -154,6 +154,11 @@ $(function() {
             havingItems = response.having_items;
             equipItem = response.equip_item;
 
+            //次のバトルを選択した際表示されていたボタンを非表示にする
+            $('.select_next_action').hide();
+            $('.select_field_display').hide();
+            $('.equipment_display').hide();    
+
             //各値のセット
             $('.player_name').text(user.name);
             $('.player_level').text(player.level);
@@ -196,7 +201,7 @@ $(function() {
         })
         .fail(function(response) {
             console.log(response);
-            $('#battle_text').append("<br>通信に失敗しました。");
+            $('#battle_text').append("<br>通信に失敗しました。再度通信を行う場合はEnterキーを押してください。");
             textScroll();
         })
     }
@@ -556,7 +561,7 @@ $(function() {
             judgeTyping = judgeTyping.slice(0, -1);
 
             $('#player_hp').text(parseInt($('#player_hp').text()) - mistakeDamage);
-            $('#battle_text').append("<br>タイプミス！" + user.name + "は " + mistakeDamage + " のダメージ！");
+            $('#battle_text').append("<br>タイプミス！ " + user.name + " は " + mistakeDamage + " のダメージ！");
             if($('#player_hp').text() <= 0) {
                 $('#player_hp').text(0);
                 gameover();
@@ -619,7 +624,7 @@ $(function() {
 
         $('#attackAudio')[0].play();
 
-        $('#battle_text').append("<br>" + monster.name + "の攻撃！主人公は " + damage + " のダメージ！");
+        $('#battle_text').append(`<br>${monster.name}の攻撃！ ${user.name} は ${damage} のダメージ！`);
 
         textScroll();
 
@@ -856,7 +861,7 @@ $(function() {
         })
         .fail(function(response) {
             console.log(response)
-            $('#battle_text').append("<br>データの保存に失敗しました。");
+            $('#battle_text').append("<br>データの保存に失敗しました。再度通信を行う場合はEnterキーを押してください。");
             textScroll();
             judgeEnter = 0;
         });
@@ -922,9 +927,6 @@ $(function() {
 
     //次のバトルを選択した際の処理
     $('#next_battle').on('click', function() {
-        $('.select_next_action').hide();
-        $('.select_field_display').hide();
-        $('.equipment_display').hide();
         getData();
     });
 
