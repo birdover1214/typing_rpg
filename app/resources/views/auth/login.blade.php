@@ -53,12 +53,14 @@
                                 Login
                             </button>
                         </div>
-                        
                         @if (Route::has('password.request'))
                         <a class="btn btn-link" href="{{ route('password.request') }}">
                             パスワードを忘れた方はこちら
                         </a>
                         @endif
+                        <div class="twitter_login_wrap">
+                            <a href="{{ route('login.twitter') }}" id="twitter_login_btn"><i class="fab fa-twitter"></i>Twitterで簡単登録＆ログイン</a>
+                        </div>
                     </div>
                 </form>
                 <div class="link_register">

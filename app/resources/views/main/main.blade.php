@@ -125,9 +125,14 @@
                     <div id="scoredis" class="bold"></div>
                     <div id="press_enter" class="bold">Press Enter</div>
                     <div class="select_next_action">
-                        <input type="button" value="次のバトル" id="next_battle">
-                        <input type="button" value="フィールドの変更" id="change_field">
-                        <input type="button" value="装備の変更" id="change_equipment">
+                        <div class="action_btn_wrap">
+                            <input type="button" value="次のバトル" id="next_battle">
+                            <input type="button" value="フィールドの変更" id="change_field">
+                            <input type="button" value="装備の変更" id="change_equipment">
+                        </div>
+                        <div class="shareing_sns">
+                            <a href="" id="shareing_twitter" target="_blank" rel="noopener"><i class="fab fa-twitter"></i>ツイートする</a>
+                        </div>
                     </div>
                 </div>
             </div>

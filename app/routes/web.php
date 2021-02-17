@@ -17,7 +17,9 @@ Route::get('/', 'HomeController@index')->name('home');
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+//Twitterログイン
+Route::get('login/twitter', 'Auth\LoginController@redirectToProvider')->name('login.twitter');
+Route::get('login/twitter/callback', 'Auth\LoginController@handleProviderCallback');
 
 Route::group(['middleware' => 'auth'], function() {
 

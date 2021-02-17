@@ -29,7 +29,9 @@
                     <span class="arrow_down">↓</span><br>
                     (5)次の行動の選択(フィールド変更や装備変更)<br><br>
                     となります。<br>
-                    フィールド選択やバトルなどの詳細は各種タブをご覧ください。
+                    フィールド選択やバトルなどの詳細は各種タブをご覧ください。<br><br>
+                    <span style="color: red">※　Twitterで新規登録を行った方は初期パスワードが「password」に設定されています。<br>
+                    ヘッダー中央右側にある「ユーザー情報」からパスワードの変更が行えますので変更してご利用ください。</span>
                 </p>
             </div>
             <div id="field_info" class="info_tabpanel">

@@ -907,6 +907,14 @@ $(function() {
         $('#battle_text').append("<br>次の行動を選択してください。");
         textScroll();
 
+        let victoryFlg = victoryCount();
+        if(victoryFlg != victoryCnt) {
+            $('#shareing_twitter').attr('href', `https://twitter.com/share?url=https://typing-rpg.com/login&hashtags=TypingRPG&text=${monster.name}をスコア${score}で倒しました！`);
+            $('.shareing_sns').show();
+        }else {
+            $('#shareing_twitter').attr('href', '');
+            $('.shareing_sns').hide();
+        }
         $('.select_next_action').css('display', 'flex');
 
         battleInit();
