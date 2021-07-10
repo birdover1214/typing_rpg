@@ -125,7 +125,7 @@
                                 <h2 class="check_head">編集の確認</h2>
                                 <p class="check_text">
                                     変更内容を保存します。<br>
-                                    <span>よろしければフォームに現在のパスワードを入力して、「変更内容を確定する」ボタンを押してください。</span><br>
+                                    <span>よろしければフォームに使用中のパスワードを入力して、「変更内容を確定する」ボタンを押してください。</span><br>
                                     <strong class="check_init">キャラクター能力の初期化が選択されています。このまま変更を確定すると元には戻せません。</strong>
                                 </p>
                             </div>
@@ -144,18 +144,18 @@
                     </div>
                 </form>
                 <form action="POST" id="delete_form" action="{{ route('userDelete') }}">
-                    <input type="submit" value="登録の解除" id="delete_check">
+                    <input type="submit" value="退会する" id="delete_check">
                     <div class="check_modal" id="delete_modal">
                         <div class="modal_window delete_window">
                             <div class="check_text_wrap">
-                                <h2 class="check_head">登録の解除</h2>
+                                <h2 class="check_head">退会確認</h2>
                                 <p class="check_text">
-                                    ユーザー登録を解除します。<br>
+                                    ユーザー情報を削除し、退会処理を行います。<br>
                                     <span>よろしければ確定ボタンを押してください。</span><br>
                                 </p>
                             </div>
                             <div class="form_button_wrap">
-                                <input type="submit" class="modal_btn" id="delete_btn" disabled="true" value="登録を解除する">
+                                <input type="submit" class="modal_btn" id="delete_btn" disabled="true" value="確定">
                                 <button class="modal_btn cancel_btn" id="delete_cancel_btn">キャンセル</button>
                             </div>
                         </div>

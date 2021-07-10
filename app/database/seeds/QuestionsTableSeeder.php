@@ -65,8 +65,8 @@ class QuestionsTableSeeder extends Seeder
 
             [
                 'field_id' => 1,
-                'word' => 'ケツメイシ',
-                'word_kana' => 'けつめいし',
+                'word' => '経験値',
+                'word_kana' => 'けいけんち',
             ],
 
             [
@@ -125,8 +125,8 @@ class QuestionsTableSeeder extends Seeder
 
             [
                 'field_id' => 1,
-                'word' => 'デプロイ',
-                'word_kana' => 'でぷろい',
+                'word' => '電磁波',
+                'word_kana' => 'でんじは',
             ],
 
             [
@@ -137,8 +137,8 @@ class QuestionsTableSeeder extends Seeder
 
             [
                 'field_id' => 1,
-                'word' => 'ナイツ',
-                'word_kana' => 'ないつ',
+                'word' => 'ナポレオン',
+                'word_kana' => 'なぽれおん',
             ],
 
             [
@@ -161,8 +161,8 @@ class QuestionsTableSeeder extends Seeder
 
             [
                 'field_id' => 1,
-                'word' => '登別',
-                'word_kana' => 'のぼりべつ',
+                'word' => 'ノクターン',
+                'word_kana' => 'のくたーん',
             ],
 
             [
@@ -179,8 +179,8 @@ class QuestionsTableSeeder extends Seeder
 
             [
                 'field_id' => 1,
-                'word' => 'フォックス',
-                'word_kana' => 'ふぉっくす',
+                'word' => '復習',
+                'word_kana' => 'ふくしゅう',
             ],
 
             [
@@ -197,8 +197,8 @@ class QuestionsTableSeeder extends Seeder
 
             [
                 'field_id' => 1,
-                'word' => 'マカダミア',
-                'word_kana' => 'まかだみあ',
+                'word' => '満足',
+                'word_kana' => 'まんぞく',
             ],
 
             [
@@ -215,8 +215,8 @@ class QuestionsTableSeeder extends Seeder
 
             [
                 'field_id' => 1,
-                'word' => 'メンター',
-                'word_kana' => 'めんたー',
+                'word' => '面積',
+                'word_kana' => 'めんせき',
             ],
 
             [
@@ -245,14 +245,14 @@ class QuestionsTableSeeder extends Seeder
 
             [
                 'field_id' => 1,
-                'word' => 'ライブラリ',
-                'word_kana' => 'らいぶらり',
+                'word' => 'ラーメン',
+                'word_kana' => 'らーめん',
             ],
 
             [
                 'field_id' => 1,
-                'word' => 'リージョン',
-                'word_kana' => 'りーじょん',
+                'word' => '臨場',
+                'word_kana' => 'りんじょう',
             ],
 
             [
@@ -269,14 +269,14 @@ class QuestionsTableSeeder extends Seeder
 
             [
                 'field_id' => 1,
-                'word' => 'ログイン',
-                'word_kana' => 'ろぐいん',
+                'word' => '六本木',
+                'word_kana' => 'ろっぽんぎ',
             ],
 
             [
                 'field_id' => 1,
-                'word' => 'Wi-Fi',
-                'word_kana' => 'わいふぁい',
+                'word' => '若草',
+                'word_kana' => 'わかくさ',
             ],
 
             [
@@ -313,6 +313,288 @@ class QuestionsTableSeeder extends Seeder
                 'field_id' => 1,
                 'word' => '成功',
                 'word_kana' => 'せいこう',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '安穏',
+                'word_kana' => 'あんのん',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '西表',
+                'word_kana' => 'いりおもて',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '裏技',
+                'word_kana' => 'うらわざ',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '演芸部',
+                'word_kana' => 'えんげいぶ',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => 'オットセイ',
+                'word_kana' => 'おっとせい',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '唐笠',
+                'word_kana' => 'からかさ',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '近似値',
+                'word_kana' => 'きんじち',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '屈強',
+                'word_kana' => 'くっきょう',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '計略',
+                'word_kana' => 'けいりゃく',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '胡椒',
+                'word_kana' => 'こしょう',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '簒奪',
+                'word_kana' => 'さんだつ',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '蜃気楼',
+                'word_kana' => 'しんきろう',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => 'すみれ草',
+                'word_kana' => 'すみれそう',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '雑兵',
+                'word_kana' => 'ぞうひょう',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '脱臼',
+                'word_kana' => 'だっきゅう',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '忠実',
+                'word_kana' => 'ちゅうじつ',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '追従',
+                'word_kana' => 'ついじゅう',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '鉄橋',
+                'word_kana' => 'てっきょう',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '燈篭',
+                'word_kana' => 'とうろう',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '南国',
+                'word_kana' => 'なんごく',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '認証',
+                'word_kana' => 'にんしょう',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '糠に釘',
+                'word_kana' => 'ぬかにくぎ',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '熱血',
+                'word_kana' => 'ねっけつ',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '能力',
+                'word_kana' => 'のうりょく',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '晩秋',
+                'word_kana' => 'ばんしゅう',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => 'ビードロ',
+                'word_kana' => 'びーどろ',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '武則天',
+                'word_kana' => 'ぶそくてん',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '編集',
+                'word_kana' => 'へんしゅう',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '北極',
+                'word_kana' => 'ほっきょく',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '抹消',
+                'word_kana' => 'まっしょう',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '未開拓',
+                'word_kana' => 'みかいたく',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '無限大',
+                'word_kana' => 'むげんだい',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '明晰夢',
+                'word_kana' => 'めいせきむ',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '目標',
+                'word_kana' => 'もくひょう',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '八百万',
+                'word_kana' => 'やおよろず',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '雪景色',
+                'word_kana' => 'ゆきげしき',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '宵の口',
+                'word_kana' => 'よいのくち',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '羅針盤',
+                'word_kana' => 'らしんばん',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '良縁',
+                'word_kana' => 'りょうえん',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => 'ルネサンス',
+                'word_kana' => 'るねさんす',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => 'レモネード',
+                'word_kana' => 'れもねーど',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '露天風呂',
+                'word_kana' => 'ろてんぶろ',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '和三盆',
+                'word_kana' => 'わさんぼん',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => 'ガラス板',
+                'word_kana' => 'がらすいた',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '議定書',
+                'word_kana' => 'ぎていしょ',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '群青',
+                'word_kana' => 'ぐんじょう',
+            ],
+
+            [
+                'field_id' => 1,
+                'word' => '迎春',
+                'word_kana' => 'げいしゅん',
             ],
 
             //森

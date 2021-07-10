@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>@yield('title')</title>
-
+    <link rel="shortcut icon" href="{{ asset('/images/favicon/favicon.ico') }}">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     @yield('scripts')
@@ -27,7 +27,7 @@
     <header class="site_header">
         <div class="site_header_start">
             <a href="{{ url('/') }}" class="header_brand">
-                TypingRPG
+                <img src="{{ asset('/images/system_images/logo2w150.png') }}" alt="">
             </a>
         </div>
         <div class="site_header_middle">

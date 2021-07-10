@@ -21,11 +21,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
     height: 50px;
     z-index: 100;
 
-    .header_brand {
-        font-weight: bold;
-        font-size: 20px;
-        text-decoration: none;
-        color: white;
+    .site_header_start {
+        height: 50px;
     }
 
     .navbar_middle {

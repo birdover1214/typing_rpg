@@ -85,6 +85,8 @@ $(function() {
     //questionsの各値を格納しておく変数
     let words = [];
     let wordsKana = [];
+    //問題文が連続して出題されるのを防ぐ為に1問前の問題文を格納しておく変数
+    let beforeWord = "";
     //問題文を区切って格納する為の変数
     let separationKana = [];
     let separationRomaji = [];
@@ -201,7 +203,7 @@ $(function() {
         })
         .fail(function(response) {
             console.log(response);
-            $('#battle_text').append("<br>通信に失敗しました。再度通信を行う場合はEnterキーを押してください。");
+            $('#battle_text').append("<br>通信に失敗しました。");
             textScroll();
         })
     }
@@ -299,7 +301,6 @@ $(function() {
         //monsterの攻撃カウントを開始する
         $('#count').show();
         monsterAttackCount();
-        status = 2;
     }
 
 
@@ -310,6 +311,13 @@ $(function() {
     function setQuestion() {
         //ランダムに出題を行う
         let number = parseInt( Math.random() * words.length );
+
+        //問題文が前問と一致する場合出題処理をやり直す
+        if(words[number] == beforeWord) {
+            setQuestion();
+        }
+
+        beforeWord = words[number];
         $('#word').show();
         $('#word').text(words[number]);
         if(field.id == 2 || field.id == 4) {
@@ -736,8 +744,11 @@ $(function() {
 
             if(getExp < player.next_exp) {
                 player.next_exp -= getExp;
+                
+                for(let j = 0; j < levelUpCount; j++) {
+                    bonusPoint += player.level >= 30 ? 2 : 1;
+                }
                 player.level += levelUpCount;
-                bonusPoint = levelUpCount;
                 break;
             }
 
@@ -957,6 +968,7 @@ $(function() {
         displayEnter = 0;
         readyTime = 3;
         words = [];
+        beforeWord = "";
         wordsKana = [];
         separationKana = [];
         separationRomaji = [];
@@ -990,6 +1002,7 @@ $(function() {
             if(infoFlag == 1) {
                 return false;
             }
+            status = 2;
             $('#battle_btn').trigger('click');
         }
 
