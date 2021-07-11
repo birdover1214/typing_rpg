@@ -131,7 +131,7 @@ $(function() {
     //フィールドを選択した際の処理
     $('.field_btn').on('click', function(e) {
         e.preventDefault();
-
+        console.log(100)
 
         $('#battle_text').append("<br>" + "通信中・・・")
 
@@ -287,6 +287,9 @@ $(function() {
     //バトル開始
     function gameStart() {
         $('#ready_count').hide();
+
+        status = 2;
+
         //出題処理
         setQuestion();
         //各値の初期化
@@ -312,9 +315,13 @@ $(function() {
         //ランダムに出題を行う
         let number = parseInt( Math.random() * words.length );
 
-        //問題文が前問と一致する場合出題処理をやり直す
+        //問題文が前問と一致する場合インデックスを変更
         if(words[number] == beforeWord) {
-            setQuestion();
+            if(number != words.length) {
+                number--;
+            }else {
+                number++;
+            }
         }
 
         beforeWord = words[number];
@@ -1002,7 +1009,7 @@ $(function() {
             if(infoFlag == 1) {
                 return false;
             }
-            status = 2;
+            
             $('#battle_btn').trigger('click');
         }
 
