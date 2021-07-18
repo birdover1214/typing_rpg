@@ -32,6 +32,24 @@
 <br>
 <br>
 # TypingRPGの特徴
-一番の特徴はタイピングゲームにロールプレイングゲームの要素を加えた事です。
-
+一番の特徴はタイピングゲームにロールプレイングゲームの要素を加えた事です。<br>
+タイピングゲーム部分での特徴は複数入力に対応している点です。<br>
+例えば、「問題」という文字列であれば「mondai」、「monndai」と2パターンどちらでも正解となり、ユーザーがタイプしたキーに合わせて動的にローマ字部分の表示が変わります。<br>
+<br>
+# 使用技術
+<ul>
+  <li>PHP7.4</li>
+  <li>Laravel7.29</li>
+  <li>Javascript(jQuery)</li>
+  <li>HTML/CSS(Sass)</li>
+  <li>MySQL8.0</li>
+  <li>Nginx</li>
+  <li>Docker/Docker Compose</li>
+  <li>AWS</li>
+  <li>Twitter API</li>
+</ul>
+<br>
+<br>
+# インフラ構成図<br>
+AWSの複数のサービスを利用して公開しています。<br>
 ![構成図](https://user-images.githubusercontent.com/71583677/96476423-21583c80-1270-11eb-8088-c0eabbb635f2.png)
