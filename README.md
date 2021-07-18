@@ -50,6 +50,7 @@
 </ul>
 <br>
 <br>
-# インフラ構成図<br>
+# インフラ構成図
 AWSの複数のサービスを利用して公開しています。<br>
+<br>
 ![構成図](https://user-images.githubusercontent.com/71583677/96476423-21583c80-1270-11eb-8088-c0eabbb635f2.png)
