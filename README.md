@@ -50,7 +50,19 @@
 </ul>
 <br>
 <br>
+
 # インフラ構成図
+<br>
 AWSの複数のサービスを利用して公開しています。<br>
 <br>
+
 ![構成図](https://user-images.githubusercontent.com/71583677/96476423-21583c80-1270-11eb-8088-c0eabbb635f2.png)
+<br>
+<br>
+# 機能一覧
+<ul>
+  <li>ユーザー登録/ログイン機能(Laravel/ui)</li>
+  <li>Twitter APIを利用したユーザー登録/ログイン機能</li>
+  <li>ユーザー情報編集機能</li>
+  <li>ユーザー退会機能</li>
+</ul>
